@@ -1,3 +1,5 @@
+pip freeze > requirements.txt
+
 import requests
 
 def line_notify(msg):
