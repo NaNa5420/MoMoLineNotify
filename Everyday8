@@ -1,0 +1,16 @@
+import requests
+
+def line_notify(msg):
+    token = 'aI9zX5UC5iE0QlIZoZxfEBugrT8w2pJoLKlryhOcuLi'  # 填入你的token
+    url = 'https://notify-api.line.me/api/notify'
+    headers = {
+        'Authorization': 'Bearer ' + token
+    }
+    data = {
+        'message': msg,
+        "stickerPackageId" : 8515,  # 貼圖包ID
+        "stickerId" : 16581243  # 貼圖ID
+    }
+    requests.post(url, headers=headers, data=data)
+
+line_notify('想想你台哥大帳單')
